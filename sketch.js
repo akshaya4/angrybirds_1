@@ -7,6 +7,9 @@ var box1, pig1;
 var backgroundImg;
 
 
+function preload() {
+    backgroundImg = loadImage("sprites/bg.png");
+}
 function setup(){
     var canvas = createCanvas(1200,400);
     engine = Engine.create();
@@ -35,7 +38,7 @@ function setup(){
 }
 
 function draw(){
-    background(0);
+    background(backgroundImg);
     Engine.update(engine);
     
     box1.display();
